@@ -169,7 +169,7 @@ def create_metadata(chapter_titles, sub_chapter_files, sub_chapter_num):
                        start_sub_chapter):
             metadata.append(MANIFEST_ITEM.format(
                 sub_chapter_files[l].replace(
-                    ' ', "%20") + ".xhtml", "id" + str(i),
+                    ' ', "%20").replace('"', '') + ".xhtml", "id" + str(i),
                 MANIFEST_TYPE_XHTML))
             ids.append("id" + str(i))
             i += 1
